@@ -138,9 +138,10 @@ if __name__ == '__main__':
 		decoder = decoder.cuda()
 	criterion = nn.CrossEntropyLoss()
 	total_step = (train_size/BATCH_SIZE) +1
-	try:
-		for epoch in  range(NB_EPOCH):
-			step = 0
+	
+	for epoch in  range(NB_EPOCH):
+		step = 0
+		try:
 			for i in range(0, train_size, BATCH_SIZE):
 				step+=1
 				num_samples = min(BATCH_SIZE, train_size - i)
@@ -163,9 +164,9 @@ if __name__ == '__main__':
 					print('Epoch [%d/%d], Step [%d/%d], Train Loss: %.4f \n'%(epoch+1, NB_EPOCH, step, 
 					total_step, train_loss))
 					print('Validation Loss %.4f'%(val_loss/float(count)))
-	except KeyboardInterrupt:
-		print("Saving before quit...")
-		save(encoder, 'encoder_[%d/%d].pkl'%(step, total_step))
-		save(decoder, 'decoder_[%d/%d].pkl'%(step, total_step))
+		except KeyboardInterrupt:
+			print("Saving before quit...")
+			save(encoder, 'encoder_[%d/%d].pkl'%(step, total_step))
+			save(decoder, 'decoder_[%d/%d].pkl'%(step, total_step))
 	save(encoder, 'encoder.pkl')
 	save(decoder, 'decoder.pkl')
