@@ -17,7 +17,7 @@ To train a model, run `train.py`
 python train.py 
 ```
 
-##Usage 
+## Usage 
 ```
 Pytorch Seq2seq encoder decoder training for MT
 
