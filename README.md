@@ -24,9 +24,9 @@ Pytorch Seq2seq encoder decoder training for MT
 optional arguments:
   -h, --help            Thow this help message and exit
   -nb_epoch            	number of total epochs to run
-  -batch_size			mini-batch size (default: 128)
-  -learning_rate		learning rate default set to 0.01
-  -vocab_size			size of vocabulary default set to 10000
-  -hidden_dim 			size of hidden layer default set to 300
-  -dropout				dropout probability default set to 0.3
+  -batch_size           mini-batch size (default: 128)
+  -learning_rate        learning rate default set to 0.01
+  -vocab_size           size of vocabulary default set to 10000
+  -hidden_dim           size of hidden layer default set to 300
+  -dropout              dropout probability default set to 0.3
 ```
